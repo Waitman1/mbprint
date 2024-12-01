@@ -68,42 +68,34 @@ const Cooperation: React.FC = () => {
   }, [inView, controls]);
 
   return (
-    <div className="container mx-auto px-20 py-10 ">
-      <h2 className="text-center text-3xl font-bold mb-8">
+    <div className="container mx-auto px-4 sm:px-8 py-12">
+      <h2 className="text-center text-3xl font-bold mb-10">
         Три варианта сотрудничества
       </h2>
       <motion.div
-        ref={ref} // Связываем контейнер с IntersectionObserver
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 "
+        ref={ref}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         initial="hidden"
         animate={controls}
       >
         {options.map((option, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center pb-6 pr-6 pl-6 border rounded-lg shadow-md bg-cyan-900 hover:shadow-lg transition-shadow justify-between"
+            className="flex flex-col items-center p-6 border rounded-lg shadow-md bg-gradient-to-br from-cyan-800 to-teal-700 hover:shadow-lg transition-shadow"
             variants={cardVariants}
             custom={index}
           >
-            <div className="flex flex-col items-center ">
-              {/* Заголовок */}
-              <h3 className="text-xl font-semibold mb-4 bg-gray-700  text-white w-[200px] text-center leading-4  py-2 px-3">
+            <div className="flex flex-col items-center">
+              <h3 className="text-lg sm:text-xl font-semibold mb-4 text-white text-center">
                 {option.title}
               </h3>
-              {/* Описание */}
-              <ul className="text-white  text-lg ">
+              <ul className="text-white text-sm sm:text-base space-y-3">
                 {option.description.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center text-md w-full my-3"
-                  >
-                    {item}
-                  </li>
+                  <li key={idx}>{item}</li>
                 ))}
               </ul>
             </div>
-            {/* Кнопка */}
-            <button className="px-4 py-4 mt-10 bg-white text-black font-medium rounded ">
+            <button className="mt-6 px-4 py-2 bg-white text-black font-medium rounded hover:bg-gray-200 transition">
               {option.buttonText}
             </button>
           </motion.div>

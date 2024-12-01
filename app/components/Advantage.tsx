@@ -46,9 +46,9 @@ const blocks = [
 
 const Advantage: React.FC = () => {
   return (
-    <div className="container bg-slate-700  mx-auto py-10 px-20 ">
-      <p className="text-white text-lg p-4">[ Наш слоган ]</p>
-      <h2 className="text-3xl font-bold text-white p-4">
+    <div className="container bg-slate-700 max-w-full mx-auto  py-10 px-4 sm:px-8 lg:px-20 ">
+      <p className="text-white text-lg p-4 uppercase">[ Наш слоган ]</p>
+      <h2 className="text-4xl font-bold text-white p-4">
         Мы – типография, не похожая ни на одну другую типографию
       </h2>
       <div className="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 gap-y-20">

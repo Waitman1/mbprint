@@ -1,23 +1,33 @@
 import logo from "../../public/img/logo2.svg";
-
 import Image from "next/image";
-
 import React, { FC } from "react";
 
 const Header: FC = () => {
   return (
-    <header className="bg-black  text-white py-6  items-center justify-center flex ">
+    <header className="bg-black text-white py-6 lg:block hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto  px-20 ">
-          <div className="flex justify-between items-center ">
-            <Image src={logo} alt="Logo" />
-            <p className="w-[300px] text-lg">
-              Посетите наше производство в Москве: 125252 г. Москва, ул. Зорге
-              15
+        <div className="flex flex-col md:flex-row justify-between items-start lg:items-center gap-6  ">
+          {/* Логотип */}
+          <div className="flex-shrink-0 ">
+            <Image src={logo} alt="Logo" className="w-32 md:w-40" />
+          </div>
+
+          {/* Адрес */}
+          <div className="text-center md:text-left hidden lg:block">
+            <p className="text-base sm:text-lg">
+              Посетите наше производство в Москве:
+              <br /> 125252 г. Москва, ул. Зорге 15
             </p>
-            <p className="w-[200px] text-lg">
+          </div>
+
+          {/* Контактный телефон */}
+          <div className="text-center md:text-right hidden lg:block">
+            <p className="text-base sm:text-lg">
               Телефон:
-              <br /> +7 (499) 350-64-25
+              <br />
+              <a href="tel:+74993506425" className="underline">
+                +7 (499) 350-64-25
+              </a>
             </p>
           </div>
         </div>

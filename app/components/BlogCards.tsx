@@ -45,8 +45,8 @@ const BlogCards: React.FC = () => {
   ];
 
   return (
-    <div className="container bg-slate-700 mx-auto py-10 px-20 ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-20 p-4">
+    <div className="container bg-slate-700 max-w-full mx-auto  py-10 px-4 sm:px-8 lg:px-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
         {cardData.map((card, index) => (
           <Card key={index} imageUrl={card.imageUrl} title={card.title} />
         ))}

@@ -20,19 +20,16 @@ const Slider: FC = () => {
       title: "Эксклюзивные печатные материалы для бизнеса",
       image: "/img/slider-3.jpg",
     },
-    ,
     {
       id: 4,
       title: "Типография полного цикла",
       image: "/img/slider4.jpg",
     },
-    ,
     {
       id: 5,
       title: "Печать книг премиум класса",
       image: "/img/slider5.jpg",
     },
-    ,
     {
       id: 6,
       title: "Эксклюзивные печатные материалы для бизнеса",
@@ -41,37 +38,27 @@ const Slider: FC = () => {
   ];
 
   return (
-    <div style={{ maxWidth: "max-content", margin: "0 auto" }}>
+    <div className="max-w-screen  mx-auto ">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]} // Подключение модулей
+        modules={[Navigation, Pagination, Autoplay]}
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop
-        spaceBetween={30}
+        spaceBetween={20}
         slidesPerView={1}
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div style={{ position: "relative", textAlign: "center" }}>
+            <div className="relative text-center">
+              {/* Изображение */}
               <img
                 src={slide.image}
                 alt={slide.title}
-                style={{
-                  width: "100%",
-                }}
+                className="w-full h-[200px] md:h-[300px] lg:h-[480px] object-cover"
               />
-              <h3
-                style={{
-                  position: "absolute",
-                  bottom: "10%",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  color: "white",
-                  fontSize: "80px",
-                  padding: "5px 10px",
-                }}
-              >
+              {/* Текст */}
+              <h3 className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white  text-lg md:text-2xl lg:text-4xl px-4 py-4">
                 {slide.title}
               </h3>
             </div>

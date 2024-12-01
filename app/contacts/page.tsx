@@ -1,135 +1,108 @@
+// pages/contacts.tsx
 import { FC } from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const Contacts: FC = () => {
   return (
-    <div>
+    <>
       <Header />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8  bg-white ">
-        <main>
-          <section id="about" className="py-12 bg-white">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl font-bold mb-4">О нашей компании</h2>
-              <p className="text-lg leading-relaxed text-gray-600">
-                Мы начали с небольшой идеи, которая со временем превратилась в
-                масштабный проект. Сегодня мы предоставляем услуги, которые
-                делают жизнь людей лучше.
-              </p>
-            </div>
-          </section>
+      <Navbar />
+      <div className="bg-gray-50 py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">
+            Контакты
+          </h1>
 
-          <section id="history" className="py-12 bg-gray-100">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-bold text-center mb-8">
-                История нашей компании
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Адрес
               </h2>
-              <div className="relative">
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-blue-600"></div>
-
-                <div className="mb-10 flex flex-col md:flex-row items-center md:items-start">
-                  <div className="md:w-1/2 px-4 text-right md:pr-12">
-                    <h3 className="text-xl font-bold text-blue-600">2010</h3>
-                    <h4 className="text-lg font-semibold mb-2">
-                      Основание компании
-                    </h4>
-                    <p className="text-gray-600">
-                      Мы начали с небольшой команды энтузиастов, объединенных
-                      идеей создания инновационного продукта.
-                    </p>
-                  </div>
-                  <div className="md:w-1/2 px-4 mt-4 md:mt-0">
-                    <img
-                      src="https://via.placeholder.com/400x250"
-                      alt="Основание компании"
-                      className="rounded-lg shadow-lg"
-                    />
-                  </div>
-                </div>
-
-                <div className="mb-10 flex flex-col md:flex-row-reverse items-center md:items-start">
-                  <div className="md:w-1/2 px-4 text-left md:pl-12">
-                    <h3 className="text-xl font-bold text-blue-600">2015</h3>
-                    <h4 className="text-lg font-semibold mb-2">
-                      Первый успешный продукт
-                    </h4>
-                    <p className="text-gray-600">
-                      Наша команда выпустила первый продукт, который мгновенно
-                      завоевал популярность на рынке.
-                    </p>
-                  </div>
-                  <div className="md:w-1/2 px-4 mt-4 md:mt-0">
-                    <img
-                      src="https://via.placeholder.com/400x250"
-                      alt="Первый продукт"
-                      className="rounded-lg shadow-lg"
-                    />
-                  </div>
-                </div>
-
-                <div className="mb-10 flex flex-col md:flex-row items-center md:items-start">
-                  <div className="md:w-1/2 px-4 text-right md:pr-12">
-                    <h3 className="text-xl font-bold text-blue-600">2020</h3>
-                    <h4 className="text-lg font-semibold mb-2">
-                      Выход на международный рынок
-                    </h4>
-                    <p className="text-gray-600">
-                      Мы расширили горизонты, начав работать с клиентами и
-                      партнерами из других стран.
-                    </p>
-                  </div>
-                  <div className="md:w-1/2 px-4 mt-4 md:mt-0">
-                    <img
-                      src="https://via.placeholder.com/400x250"
-                      alt="Международный рынок"
-                      className="rounded-lg shadow-lg"
-                    />
-                  </div>
-                </div>
-
-                <div className="mb-10 flex flex-col md:flex-row-reverse items-center md:items-start">
-                  <div className="md:w-1/2 px-4 text-left md:pl-12">
-                    <h3 className="text-xl font-bold text-blue-600">2023</h3>
-                    <h4 className="text-lg font-semibold mb-2">
-                      Признание лидером
-                    </h4>
-                    <p className="text-gray-600">
-                      Компания была признана лидером отрасли, получив множество
-                      наград и признание клиентов.
-                    </p>
-                  </div>
-                  <div className="md:w-1/2 px-4 mt-4 md:mt-0">
-                    <img
-                      src="https://via.placeholder.com/400x250"
-                      alt="Лидер отрасли"
-                      className="rounded-lg shadow-lg"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="contacts" className="py-12 bg-gray-100">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl font-bold mb-4">Контакты</h2>
-              <p className="text-lg text-gray-600">
-                Свяжитесь с нами, чтобы узнать больше о наших услугах.
+              <p className="text-lg text-gray-600 mb-4">
+                Москва, улица Примерная, дом 123, офис 45
               </p>
-              <div className="mt-6">
-                <a
-                  href="mailto:info@company.com"
-                  className="text-blue-600 font-medium hover:underline"
-                >
-                  info@company.com
-                </a>
-              </div>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Телефон
+              </h2>
+              <p className="text-lg text-gray-600">+7 (123) 456-78-90</p>
             </div>
-          </section>
-        </main>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Электронная почта
+              </h2>
+              <p className="text-lg text-gray-600 mb-4">info@mbprint.ru</p>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+                Рабочие часы
+              </h2>
+              <p className="text-lg text-gray-600">Пн-Пт: 9:00 - 18:00</p>
+              <p className="text-lg text-gray-600">Сб-Вс: выходной</p>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              Связаться с нами
+            </h2>
+            <form className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    className="block text-lg font-medium text-gray-800"
+                    htmlFor="name"
+                  >
+                    Ваше имя
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="mt-2 p-3 w-full border border-gray-300 rounded-lg"
+                    placeholder="Введите ваше имя"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="block text-lg font-medium text-gray-800"
+                    htmlFor="email"
+                  >
+                    Электронная почта
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="mt-2 p-3 w-full border border-gray-300 rounded-lg"
+                    placeholder="Введите вашу почту"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <label
+                  className="block text-lg font-medium text-gray-800"
+                  htmlFor="message"
+                >
+                  Сообщение
+                </label>
+                <textarea
+                  id="message"
+                  className="mt-2 p-3 w-full border border-gray-300 rounded-lg"
+                  rows={4}
+                  placeholder="Введите ваше сообщение"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="mt-6 w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700"
+              >
+                Отправить сообщение
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
