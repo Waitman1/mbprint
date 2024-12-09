@@ -1,5 +1,3 @@
-import logo from "../../public/img/logo2.svg";
-import Image from "next/image";
 import React, { FC } from "react";
 
 const Header: FC = () => {
@@ -9,7 +7,7 @@ const Header: FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start lg:items-center gap-6  ">
           {/* Логотип */}
           <div className="flex-shrink-0 ">
-            <Image src={logo} alt="Logo" className="w-32 md:w-40" />
+            <img src="/img/logo2.svg" alt="Logo" className="w-32 md:w-40" />
           </div>
 
           {/* Адрес */}

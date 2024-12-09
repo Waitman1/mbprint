@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import React, { FC, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../../public/img/logo2.svg"; // Иконки из react-icons
+// Иконки из react-icons
 
 const Navbar: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +13,7 @@ const Navbar: FC = () => {
       <div className="container mx-auto flex items-center lg:justify-center px-4 py-3">
         {/* Логотип или Название */}
         <div className="flex-shrink-0 lg:hidden">
-          <Image src={logo} alt="Logo" className="w-32 md:w-40" />
+          <img src="/img/logo2.svg" alt="Logo" className="w-32 md:w-40" />
         </div>
 
         {/* Кнопка бургер */}

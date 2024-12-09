@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import React, { FC, useState } from "react";
-import svgCheck from "/public/img/check.svg";
 
 const BlogAboutCompany: FC = () => {
   const [currentBlock, setCurrentBlock] = useState("block1");
@@ -12,7 +10,7 @@ const BlogAboutCompany: FC = () => {
       <div className="flex flex-col lg:flex-row max-w-max  mx-auto container">
         {/* Блок с изображением */}
         <div className="w-full lg:w-1/2">
-          <Image
+          <img
             src="/img/tipographia3.jpg"
             alt="Фото типографии"
             className="w-full h-auto object-cover"
@@ -79,8 +77,8 @@ const BlogAboutCompany: FC = () => {
                       "Сбалансированная стоимость",
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center mb-4">
-                        <Image
-                          src={svgCheck}
+                        <img
+                          src="/img/check.svg"
                           width={20}
                           height={20}
                           alt="галочка"
@@ -106,8 +104,8 @@ const BlogAboutCompany: FC = () => {
                       "2 млн $ вложено в оборудование для печати",
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center mb-4">
-                        <Image
-                          src={svgCheck}
+                        <img
+                          src="/img/check.svg"
                           width={20}
                           height={20}
                           alt="галочка"
@@ -127,8 +125,8 @@ const BlogAboutCompany: FC = () => {
                   </p>
                   <ul>
                     <li className="flex items-center mb-4">
-                      <Image
-                        src={svgCheck}
+                      <img
+                        src="/img/check.svg"
                         width={20}
                         height={20}
                         alt="галочка"

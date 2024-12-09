@@ -1,27 +1,45 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
+    "target": "esnext", // Целевая версия JavaScript
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // Библиотеки для работы
+    "allowJs": true, // Разрешить использование JavaScript файлов
+    "skipLibCheck": true, // Пропустить проверку типов внутри node_modules
+    "strict": true, // Включить строгий режим TypeScript
+    "forceConsistentCasingInFileNames": true, // Проверка регистра в путях файлов
+    "noEmit": true, // Запретить генерацию файлов JavaScript
+    "esModuleInterop": true, // Совместимость с CommonJS модулями
+    "module": "esnext", // Использовать ES-модули
+    "moduleResolution": "node", // Резолвинг модулей как в Node.js
+    "resolveJsonModule": true, // Поддержка импорта JSON
+    "isolatedModules": true, // Изоляция модулей
+    "jsx": "preserve", // Сохранение JSX в файлах
+    "baseUrl": ".", // Базовый путь для относительных путей
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ], // Алиас для папки src
+      "@/assets/*": [
+        "./src/assets/*"
+      ] // Алиас для assets
+    },
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./*"],
-      "@/img/*": ["/public/img/*"]
-    }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
