@@ -7,7 +7,11 @@ const Header: FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start lg:items-center gap-6  ">
           {/* Логотип */}
           <div className="flex-shrink-0 ">
-            <img src="/img/logo2.svg" alt="Logo" className="w-32 md:w-40" />
+            <img
+              src="/mbprint/img/logo2.svg"
+              alt="Logo"
+              className="w-32 md:w-40"
+            />
           </div>
 
           {/* Адрес */}

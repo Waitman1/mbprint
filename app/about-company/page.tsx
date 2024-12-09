@@ -52,7 +52,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/img/1997_kvadrat4-2.png"
+                      src="/mbprint/img/1997_kvadrat4-2.png"
                       alt="Основание компании"
                       className="rounded-lg shadow-lg"
                     />
