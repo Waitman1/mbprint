@@ -13,7 +13,7 @@ const Navbar: FC = () => {
       <div className="container mx-auto flex items-center lg:justify-center px-4 py-3">
         {/* Логотип или Название */}
         <div className="flex-shrink-0 lg:hidden">
-          <img src="/img/logo2.svg" alt="Logo" className="w-32 md:w-40" />
+          <img src="img/logo2.svg" alt="Logo" className="w-32 md:w-40" />
         </div>
 
         {/* Кнопка бургер */}

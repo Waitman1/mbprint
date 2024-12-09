@@ -15,7 +15,7 @@ const Professionals: FC = () => {
         <FlipCard
           frontText="Передняя сторона"
           backText="Задняя сторона"
-          imageUrl="/img/developer1.jpg"
+          imageUrl="img/developer1.jpg"
         />
       </div>
     </div>

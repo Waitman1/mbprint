@@ -11,7 +11,7 @@ const BlogAboutCompany: FC = () => {
         {/* Блок с изображением */}
         <div className="w-full lg:w-1/2">
           <img
-            src="/img/tipographia3.jpg"
+            src="img/tipographia3.jpg"
             alt="Фото типографии"
             className="w-full h-auto object-cover"
             width={1000}
@@ -78,7 +78,7 @@ const BlogAboutCompany: FC = () => {
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center mb-4">
                         <img
-                          src="/img/check.svg"
+                          src="img/check.svg"
                           width={20}
                           height={20}
                           alt="галочка"
@@ -105,7 +105,7 @@ const BlogAboutCompany: FC = () => {
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-center mb-4">
                         <img
-                          src="/img/check.svg"
+                          src="img/check.svg"
                           width={20}
                           height={20}
                           alt="галочка"
@@ -126,7 +126,7 @@ const BlogAboutCompany: FC = () => {
                   <ul>
                     <li className="flex items-center mb-4">
                       <img
-                        src="/img/check.svg"
+                        src="img/check.svg"
                         width={20}
                         height={20}
                         alt="галочка"

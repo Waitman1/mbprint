@@ -52,7 +52,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/mbprint/img/1997_kvadrat4-2.png"
+                      src="img/1997_kvadrat4-2.png"
                       alt="Основание компании"
                       className="rounded-lg shadow-lg"
                     />
@@ -71,7 +71,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/img/2002_install-Sh52IVP_kvadrat4.png"
+                      src="img/2002_install-Sh52IVP_kvadrat4.png"
                       alt="Первый продукт"
                       className="rounded-lg shadow-lg"
                     />
@@ -154,7 +154,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/img/2012_RISO_ComColor_7010.png"
+                      src="img/2012_RISO_ComColor_7010.png"
                       alt="Лидер отрасли"
                       className="rounded-lg shadow-lg"
                     />
@@ -175,7 +175,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/img/2013_AGOR_JET2.png"
+                      src="img/2013_AGOR_JET2.png"
                       alt="Международный рынок"
                       className="rounded-lg shadow-lg"
                     />
@@ -215,7 +215,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/img/2014_Polar_78_ECO.png"
+                      src="img/2014_Polar_78_ECO.png"
                       alt="Лидер отрасли"
                       className="rounded-lg shadow-lg"
                     />
@@ -242,7 +242,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/img/2017_Multigraf_Eurofold_Touchline_CF375.png"
+                      src="img/2017_Multigraf_Eurofold_Touchline_CF375.png"
                       alt="Международный рынок"
                       className="rounded-lg shadow-lg"
                     />
@@ -261,7 +261,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/img/2019_ULTRABIND_2000_PUR.png"
+                      src="img/2019_ULTRABIND_2000_PUR.png"
                       alt="Лидер отрасли"
                       className="rounded-lg shadow-lg"
                     />
@@ -310,7 +310,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/img/Konica_Minolta_AccurioPress_C12000.jpg"
+                      src="img/Konica_Minolta_AccurioPress_C12000.jpg"
                       alt="Международный рынок"
                       className="rounded-lg shadow-lg"
                     />
@@ -360,7 +360,7 @@ const AboutCompany: FC = () => {
                   </div>
                   <div className="md:w-1/2 px-4 mt-4 md:mt-0">
                     <img
-                      src="/img/PraziCoat_PraKant_PraLeg_XS_PraForm_XS.jpg"
+                      src="img/PraziCoat_PraKant_PraLeg_XS_PraForm_XS.jpg"
                       alt="Лидер отрасли"
                       className="rounded-lg shadow-lg"
                     />

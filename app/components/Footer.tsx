@@ -9,7 +9,7 @@ const Footer: FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left gap-6">
           {/* Логотип */}
           <div>
-            <img src="/img/logo2.svg" width={100} height={100} alt="Logo" />
+            <img src="img/logo2.svg" width={100} height={100} alt="Logo" />
           </div>
 
           {/* Контактная информация */}

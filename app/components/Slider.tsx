@@ -12,28 +12,28 @@ const Slider: FC = () => {
     {
       id: 1,
       title: "Типография полного цикла",
-      image: "/img/slider-1.jpg",
+      image: "img/slider-1.jpg",
     },
-    { id: 2, title: "Печать книг премиум класса", image: "/img/slider-2.jpg" },
+    { id: 2, title: "Печать книг премиум класса", image: "img/slider-2.jpg" },
     {
       id: 3,
       title: "Эксклюзивные печатные материалы для бизнеса",
-      image: "/img/slider-3.jpg",
+      image: "img/slider-3.jpg",
     },
     {
       id: 4,
       title: "Типография полного цикла",
-      image: "/img/slider4.jpg",
+      image: "img/slider4.jpg",
     },
     {
       id: 5,
       title: "Печать книг премиум класса",
-      image: "/img/slider5.jpg",
+      image: "img/slider5.jpg",
     },
     {
       id: 6,
       title: "Эксклюзивные печатные материалы для бизнеса",
-      image: "/img/slider6.jpg",
+      image: "img/slider6.jpg",
     },
   ];
 

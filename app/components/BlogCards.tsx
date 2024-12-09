@@ -27,19 +27,19 @@ const Card: React.FC<CardProps> = ({ imageUrl, title }) => {
 const BlogCards: React.FC = () => {
   const cardData = [
     {
-      imageUrl: "/img/developer1.jpg",
+      imageUrl: "img/developer1.jpg",
       title: "01. Альбом в твердом переплете",
     },
     {
-      imageUrl: "/img/developer2.jpg",
+      imageUrl: "img/developer2.jpg",
       title: "02. Презентационные брошюры",
     },
     {
-      imageUrl: "/img/developer3.jpg",
+      imageUrl: "img/developer3.jpg",
       title: "03. Книга о проекте в упаковочной коробке",
     },
     {
-      imageUrl: "/img/developer4.jpg",
+      imageUrl: "img/developer4.jpg",
       title: "04. Презентационный альбом",
     },
   ];
