@@ -32,7 +32,9 @@ const AboutCompany: FC = () => {
                 История нашей компании
               </h2>
               <div className="relative">
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-blue-600"></div>
+                {/* Вертикальная линия */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-blue-600 md:block hidden"></div>
+                <div className="absolute left-4 h-full border-l-2 border-blue-600 block md:hidden"></div>
 
                 <div className="mb-10 flex flex-col md:flex-row items-center md:items-start">
                   <div className="md:w-1/2 px-4 text-right md:pr-12">

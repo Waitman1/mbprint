@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const PlayfairDisplay = localFont({
-  src: "../public/fonts/PlayfairDisplay-Regular.ttf",
-  variable: "--font-playfair-display",
+const MontserratLight = localFont({
+  src: "../public/fonts/Montserrat-Light.ttf",
+  variable: "--font-montserrat-light",
   weight: "100 900",
 });
-const PlayfairDisplaySemiBold = localFont({
-  src: "../public/fonts/PlayfairDisplay-SemiBold.ttf",
-  variable: "--font-playfair-display-semibold",
+const MontserratSemiBold = localFont({
+  src: "../public/fonts/Montserrat-SemiBold.ttf",
+  variable: "--font-montserrat-semibold",
   weight: "100 900",
 });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="ru_RU">
       <body
-        className={`${PlayfairDisplay.variable} ${PlayfairDisplaySemiBold.variable} antialiased bg-gray-50 text-gray-800`}
+        className={`${MontserratLight.variable} ${MontserratSemiBold.variable} antialiased bg-gray-50 text-gray-800`}
       >
         {children}
       </body>

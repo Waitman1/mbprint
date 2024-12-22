@@ -1,107 +1,158 @@
-// pages/contacts.tsx
-import { FC } from "react";
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
+"use client";
 
-const Contacts: FC = () => {
+import Footer from "app/components/Footer";
+import Header from "app/components/Header";
+import Navbar from "app/components/Navbar";
+import React from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+const Contacts: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
+
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    console.log(data);
+    alert("Сообщение успешно отправлено!");
+  };
+
   return (
     <>
       <Header />
+
       <Navbar />
-      <div className="bg-gray-50 py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">
-            Контакты
-          </h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Адрес
-              </h2>
-              <p className="text-lg text-gray-600 mb-4">
-                Москва, улица Примерная, дом 123, офис 45
-              </p>
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Телефон
-              </h2>
-              <p className="text-lg text-gray-600">+7 (123) 456-78-90</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Электронная почта
-              </h2>
-              <p className="text-lg text-gray-600 mb-4">info@mbprint.ru</p>
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Рабочие часы
-              </h2>
-              <p className="text-lg text-gray-600">Пн-Пт: 9:00 - 18:00</p>
-              <p className="text-lg text-gray-600">Сб-Вс: выходной</p>
-            </div>
-          </div>
-
-          <div className="mt-12">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Связаться с нами
-            </h2>
-            <form className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    className="block text-lg font-medium text-gray-800"
-                    htmlFor="name"
-                  >
-                    Ваше имя
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="mt-2 p-3 w-full border border-gray-300 rounded-lg"
-                    placeholder="Введите ваше имя"
-                  />
-                </div>
-                <div>
-                  <label
-                    className="block text-lg font-medium text-gray-800"
-                    htmlFor="email"
-                  >
-                    Электронная почта
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="mt-2 p-3 w-full border border-gray-300 rounded-lg"
-                    placeholder="Введите вашу почту"
-                  />
-                </div>
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+        <div className="container mx-auto flex flex-col lg:flex-row bg-white shadow-lg rounded-lg">
+          {/* Левая часть с формой */}
+          <div className="lg:w-1/2 p-6">
+            <h2 className="text-2xl font-bold mb-4">Свяжитесь с нами</h2>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+              {/* Имя */}
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Имя
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  {...register("name", { required: "Введите ваше имя" })}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Ваше имя"
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm">{errors.name.message}</p>
+                )}
               </div>
 
-              <div className="mt-6">
+              {/* E-mail */}
+              <div>
                 <label
-                  className="block text-lg font-medium text-gray-800"
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Электронная почта
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  {...register("email", { required: "Введите ваш email" })}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Ваш email"
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm">{errors.email.message}</p>
+                )}
+              </div>
+
+              {/* Сообщение */}
+              <div>
+                <label
                   htmlFor="message"
+                  className="block text-sm font-medium text-gray-700"
                 >
                   Сообщение
                 </label>
                 <textarea
                   id="message"
-                  className="mt-2 p-3 w-full border border-gray-300 rounded-lg"
+                  {...register("message", {
+                    required: "Введите ваше сообщение",
+                  })}
                   rows={4}
-                  placeholder="Введите ваше сообщение"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Ваше сообщение"
                 ></textarea>
+                {errors.message && (
+                  <p className="text-red-500 text-sm">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
 
+              {/* Кнопка отправки */}
               <button
                 type="submit"
-                className="mt-6 w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700"
+                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition"
               >
-                Отправить сообщение
+                Отправить
               </button>
             </form>
           </div>
+
+          {/* Правая часть с информацией */}
+          <div className="lg:w-1/2 bg-gray-200 p-6">
+            <h2 className="text-2xl font-bold mb-4">Контактная информация</h2>
+            <p className="mb-4">
+              Если у вас есть вопросы или предложения, свяжитесь с нами через
+              форму или по контактным данным ниже.
+            </p>
+
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold">E-mail МБ Принт:</h3>
+                <p className="text-gray-700">mb@mbprint.ru</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">Менеджер Сергей:</h3>
+                <p className="text-gray-700">morozov@mbprint.ru</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">Менеджер Алексей:</h3>
+                <p className="text-gray-700">gorokhov@mbprint.ru</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">Менеджер Марина:</h3>
+                <p className="text-gray-700">manager@mbprint.ru</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">Телефон:</h3>
+                <p className="text-gray-700">+7 (499) 350-64-25</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div className="mt-4">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab2d5776dc478957d1fda918ab5b87b121c245cb881dfcd144bd2ba2ec4c791e0&amp;source=constructor"
+          width="100%"
+          height="500"
+          frameBorder="0"
+          className="rounded-lg"
+          title="Карта"
+        ></iframe>
+      </div>
+      <Footer />
     </>
   );
 };

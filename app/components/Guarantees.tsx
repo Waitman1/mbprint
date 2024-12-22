@@ -4,7 +4,7 @@ const Guarantees: FC = () => {
   return (
     <div>
       {/* Параллакс секция */}
-      <div className="h-[400px] sm:h-[500px] lg:h-[600px] bg-fixed bg-center bg-cover bg-[url('/mbprint/img/bg-down-mine.jpg')] flex items-center justify-center">
+      <div className="h-[400px] sm:h-[500px] lg:h-[600px] bg-fixed bg-center bg-cover bg-[url('/img/bg-down-mine.jpg')] flex items-center justify-center">
         <div className="text-center text-white px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4">
             Испытайте наши гарантии в деле
