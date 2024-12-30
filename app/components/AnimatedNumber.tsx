@@ -39,7 +39,6 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
   useEffect(() => {
     if (isVisible) {
       const startTime = Date.now();
-      const endTime = startTime + duration;
 
       const interval = setInterval(() => {
         const timePassed = Date.now() - startTime;
