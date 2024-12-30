@@ -37,14 +37,44 @@ const Consultation: FC = () => {
       <div className="bg-gray-100 flex items-center justify-center min-h-screen">
         <div className="bg-white shadow-lg rounded-lg max-w-4xl w-full flex overflow-hidden">
           {/* Левая часть */}
-          <div className="w-1/2 bg-blue-500 text-white p-8 flex flex-col justify-center">
-            <h1 className="text-3xl font-bold mb-4">
+          <div className="p-5 bg-gray-100 rounded-lg shadow-md text-gray-800">
+            {/* Заголовок формы */}
+            <h2 className="text-xl font-bold text-blue-500 mb-4">
               Оцените невероятно высокие стандарты работы
-            </h1>
-            <p className="text-lg">
-              Мы стремимся к совершенству и готовы предоставить вам лучший
-              сервис. Получите консультацию прямо сейчас!
-            </p>
+            </h2>
+
+            {/* Список стандартов */}
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Идеальное воспроизведение</li>
+              <li>Точность цветовоспроизведения всегда менее 3 ΔЕ</li>
+              <li>Точность совпадения брендовых цветов по PANTONE</li>
+              <li>100% соблюдение сроков</li>
+              <li>Режимное складское хранение и гибкая логистика</li>
+              <li>
+                Двойной контроль на всех этапах для исключения ошибок и брака
+              </li>
+              <li>
+                Компетентная и опытная команда, проверенная на сотнях проектов
+              </li>
+              <li>Работа с эксклюзивными печатными материалами</li>
+              <li>Работа с белилами, лаками и отделкой</li>
+            </ul>
+
+            {/* Подзаголовок формы */}
+            <h3 className="text-lg font-semibold mt-6 mb-2">
+              Отправьте заявку, чтобы получить:
+            </h3>
+
+            {/* Список преимуществ */}
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                Карту проекта с наилучшим соотношением цены, сроков и качества
+              </li>
+              <li>
+                План, как оптимизировать стоимость изготовления всей полиграфии
+                в вашей компании
+              </li>
+            </ul>
           </div>
 
           {/* Правая часть */}

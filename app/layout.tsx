@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Snowfall from "./components/SnowFall_temp";
 
 const MontserratLight = localFont({
   src: "../public/fonts/Montserrat-Light.ttf",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${MontserratLight.variable} ${MontserratSemiBold.variable} antialiased bg-gray-50 text-gray-800`}
       >
+        <Snowfall />
         {children}
       </body>
     </html>
