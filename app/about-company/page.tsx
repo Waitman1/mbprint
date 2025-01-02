@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Professionals from "../components/Professionals";
 import Indicators from "app/components/Indicators";
+import Guarantees from "app/components/Guarantees";
+import Technologies from "app/components/Technologies";
 
 const AboutCompany: FC = () => {
   const events = [
@@ -87,11 +89,11 @@ const AboutCompany: FC = () => {
     <div className="">
       <Header />
       <Navbar />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-20">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gradient-to-r from-blue-500 via-purple-500 to-rose-950">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-white">
           История компании
         </h2>
-        <p className="text-2xl sm:text-xxl text-center">
+        <p className="text-2xl sm:text-xxl text-center py-20 text-white">
           Ключевые этапы развития типографии MB Print
         </p>
 
@@ -148,7 +150,8 @@ const AboutCompany: FC = () => {
       </div>
       <Professionals />
       <Indicators />
-
+      <Guarantees />
+      <Technologies />
       <Footer />
     </div>
   );

@@ -9,7 +9,9 @@ const SubmitApplication: FC = () => {
       <Header />
 
       <Navbar />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8  bg-white "></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8  bg-white ">
+        <h1>2asdsa</h1>
+      </div>
       <Footer />
     </div>
   );

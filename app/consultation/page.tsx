@@ -34,16 +34,13 @@ const Consultation: FC = () => {
       <Header />
       <Navbar />
 
-      <div className="bg-gray-100 flex items-center justify-center min-h-screen">
-        <div className="bg-white shadow-lg rounded-lg max-w-4xl w-full flex overflow-hidden">
+      <div className="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+        <div className="bg-white shadow-lg rounded-lg max-w-6xl w-full flex flex-col lg:flex-row overflow-hidden">
           {/* Левая часть */}
-          <div className="p-5 bg-gray-100 rounded-lg shadow-md text-gray-800">
-            {/* Заголовок формы */}
+          <div className="p-5 bg-gray-100 lg:w-1/2 text-gray-800">
             <h2 className="text-xl font-bold text-blue-500 mb-4">
               Оцените невероятно высокие стандарты работы
             </h2>
-
-            {/* Список стандартов */}
             <ul className="list-disc pl-5 space-y-2">
               <li>Идеальное воспроизведение</li>
               <li>Точность цветовоспроизведения всегда менее 3 ΔЕ</li>
@@ -59,13 +56,9 @@ const Consultation: FC = () => {
               <li>Работа с эксклюзивными печатными материалами</li>
               <li>Работа с белилами, лаками и отделкой</li>
             </ul>
-
-            {/* Подзаголовок формы */}
             <h3 className="text-lg font-semibold mt-6 mb-2">
               Отправьте заявку, чтобы получить:
             </h3>
-
-            {/* Список преимуществ */}
             <ul className="list-disc pl-5 space-y-2">
               <li>
                 Карту проекта с наилучшим соотношением цены, сроков и качества
@@ -78,10 +71,11 @@ const Consultation: FC = () => {
           </div>
 
           {/* Правая часть */}
-          <div className="w-1/2 p-8">
-            <h2 className="text-2xl font-bold mb-6">Форма обратной связи</h2>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              {/* Email */}
+          <div className="p-8 bg-white lg:w-1/2">
+            <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
+              Форма обратной связи
+            </h2>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
                 <label
                   htmlFor="email"
@@ -222,7 +216,7 @@ const Consultation: FC = () => {
               {/* Кнопка отправки */}
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition"
+                className="w-full bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600 transition-transform transform hover:scale-105"
               >
                 Отправить форму
               </button>

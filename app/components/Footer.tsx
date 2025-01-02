@@ -2,6 +2,8 @@ import React, { FC } from "react";
 // Импортируем изображение
 
 const Footer: FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-black text-white py-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +16,7 @@ const Footer: FC = () => {
 
           {/* Контактная информация */}
           <div>
-            <p>&copy; 1997-2024 Все права защищены.</p>
+            <p>&copy; 1997-{currentYear} Все права защищены.</p>
           </div>
 
           <div>

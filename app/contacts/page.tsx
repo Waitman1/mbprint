@@ -29,11 +29,18 @@ const Contacts: React.FC = () => {
       <Header />
 
       <Navbar />
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
-        <div className="container mx-auto flex flex-col lg:flex-row bg-white shadow-lg rounded-lg">
+      <div className="bg-[url('/img/bg-top-contact-5.jpg')] w-full bg-no-repeat bg-center bg-cover h-[500px] sm:h-[400px] flex items-center justify-center">
+        <h2 className="text-white text-7xl sm:text-4xl font-bold text-center">
+          Контакты
+        </h2>
+      </div>
+      <div className=" bg-gray-100 flex items-center justify-center p-6">
+        <div className="container mx-auto flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
           {/* Левая часть с формой */}
-          <div className="lg:w-1/2 p-6">
-            <h2 className="text-2xl font-bold mb-4">Свяжитесь с нами</h2>
+          <div className="lg:w-1/2 p-6 bg-white">
+            <h2 className="text-4xl font-bold mb-4 text-gray-800">
+              Напишите нам
+            </h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               {/* Имя */}
               <div>
@@ -110,39 +117,52 @@ const Contacts: React.FC = () => {
           </div>
 
           {/* Правая часть с информацией */}
-          <div className="lg:w-1/2 bg-gray-200 p-6">
-            <h2 className="text-2xl font-bold mb-4">Контактная информация</h2>
-            <p className="mb-4">
-              Если у вас есть вопросы или предложения, свяжитесь с нами через
-              форму или по контактным данным ниже.
+          <div className="lg:w-1/2 bg-gray-50 p-6">
+            <h2 className="text-4xl font-bold mb-4 text-gray-800">
+              Начните Ваш проект с MBPRINT
+            </h2>
+            <p className="mb-4 text-gray-700">
+              Позвоните/напишите нам или посетите наше производство в Москве. Мы
+              работаем: <strong>пн–пт с 10:00 до 19:00</strong>, сб–вс —
+              выходные.
             </p>
 
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-semibold">E-mail МБ Принт:</h3>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  НАШ АДРЕС:
+                </h3>
+                <p className="text-gray-700">
+                  125252 Российская Федерация, г. Москва ул. Зорге 15, метро
+                  Полежаевская, МЦК Зорге, Хорошевская
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  E-mail МБ Принт:
+                </h3>
                 <p className="text-gray-700">mb@mbprint.ru</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold">Менеджер Сергей:</h3>
-                <p className="text-gray-700">morozov@mbprint.ru</p>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Менеджеры:
+                </h3>
+                <p className="text-gray-700">Сергей: morozov@mbprint.ru</p>
+                <p className="text-gray-700">Алексей: gorokhov@mbprint.ru</p>
+                <p className="text-gray-700">Марина: manager@mbprint.ru</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold">Менеджер Алексей:</h3>
-                <p className="text-gray-700">gorokhov@mbprint.ru</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">Менеджер Марина:</h3>
-                <p className="text-gray-700">manager@mbprint.ru</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">Телефон:</h3>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Телефон:
+                </h3>
                 <p className="text-gray-700">+7 (499) 350-64-25</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-4">
+
+      <div className="">
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab2d5776dc478957d1fda918ab5b87b121c245cb881dfcd144bd2ba2ec4c791e0&amp;source=constructor"
           width="100%"
