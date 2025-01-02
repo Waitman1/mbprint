@@ -10,7 +10,7 @@ const Indicators: FC = () => {
       {/* Фон с текстом */}
       <div
         className="relative w-full text-center bg-cover bg-center bg-no-repeat bg-black/50 py-20"
-        style={{ backgroundImage: "url('/img/mbprint-history-2.jpg')" }}
+        style={{ backgroundImage: "url('/mbprint/img/mbprint-history-2.jpg')" }}
       >
         <p className="text-grey uppercase font-bold tracking-wide">
           [ больше, чем типография ]
@@ -62,7 +62,7 @@ const Indicators: FC = () => {
       {/* Изображение ниже текста */}
       <div className="bg-bg">
         <Image
-          src="/img/technologi.png"
+          src="/mbprint/img/technologi.png"
           width={1000}
           height={1000}
           alt="Технологии"

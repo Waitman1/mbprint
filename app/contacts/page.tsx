@@ -29,7 +29,7 @@ const Contacts: React.FC = () => {
       <Header />
 
       <Navbar />
-      <div className="bg-[url('/img/bg-top-contact-5.jpg')] w-full bg-no-repeat bg-center bg-cover h-[500px] sm:h-[400px] flex items-center justify-center">
+      <div className="bg-[url('/mbprint/img/bg-top-contact-5.jpg')] w-full bg-no-repeat bg-center bg-cover h-[500px] sm:h-[400px] flex items-center justify-center">
         <h2 className="text-white text-7xl sm:text-4xl font-bold text-center">
           Контакты
         </h2>
