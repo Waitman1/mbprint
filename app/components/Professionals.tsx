@@ -18,12 +18,12 @@ const Professionals: FC = () => {
       {/* Карточки сотрудников */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         <FlipCard
-          imageUrl="/img/MBprint-Morozov-1.jpg" // Замените на свою фотографию
+          imageUrl="/mbprint/img/MBprint-Morozov-1.jpg" // Замените на свою фотографию
           frontText="Сергей Морозов"
           backText="Cовладелец MB Print. Опыт работы более двадцати лет в сфере полиграфии и издательского дела"
         />
         <FlipCard
-          imageUrl="/img/MBprint-Gorohov-1.jpg" // Замените на свою фотографию
+          imageUrl="/mbprint/img/MBprint-Gorohov-1.jpg" // Замените на свою фотографию
           frontText="Алексей Горохов"
           backText="Cовладелец MB Print. Опыт работы более двадцати лет в сфере полиграфии и издательского дела"
         />
